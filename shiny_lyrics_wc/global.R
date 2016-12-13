@@ -50,8 +50,8 @@ clean_2pac = clean.text(lyrics_2pac)
 ##########################################################################################################
 
 # create list of rapper options
-rappers <<- list("Biggie Lyrics" = "biggie.lyrics",
-                 "2Pac Lyrics" = "2pac.lyrics")
+rappers <<- list("Biggie" = "biggie.lyrics",
+                 "2Pac" = "2pac.lyrics")
 
 # Using "memoise" to automatically cache the results
 getTermMatrix <- memoise(function(rapper) {

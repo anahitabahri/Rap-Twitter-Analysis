@@ -2,7 +2,7 @@ library(shiny)
 
 fluidPage(
   # Application title
-  titlePanel("Biggie vs. 2Pac Lyrics"),
+  titlePanel("What are rappers talking about on Twitter?"),
   
   sidebarLayout(
     # Sidebar with a slider and selection inputs
