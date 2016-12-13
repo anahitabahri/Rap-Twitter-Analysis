@@ -12,7 +12,9 @@ I wanted to focus on the rivalry between the late 2Pac and Biggie, but decided t
 
 Interested in learning about how I got twitter data? My [get_tweets](https://github.com/anahitabahri/Rap-Twitter-Analysis/blob/master/get_tweets.R) script will guide you through the process of using the twitteR and streamR packages.
 
-How about mapping the us_tweets file in the get_tweets script? Refer to my [mapping_us_tweets](https://github.com/anahitabahri/Rap-Twitter-Analysis/blob/master/mapping_us_tweets.R) script. I used the leaflet package to create a simple map of where the tweets were tweeted from. I wanted to add further functionality to this using shiny, but have stayed unsuccessful for now. The [shiny_map](https://github.com/anahitabahri/Rap-Twitter-Analysis/tree/master/shiny_map) folder will be updated when I've fixed the code.
+How about mapping the us_tweets file in the get_tweets script? Refer to my [mapping_us_tweets](https://github.com/anahitabahri/Rap-Twitter-Analysis/blob/master/mapping_us_tweets.R) script. I used the leaflet package to create a simple map of where the tweets were tweeted from. I wanted to add further functionality to this using shiny, but have stayed unsuccessful for now. The [shiny_map](https://github.com/anahitabahri/Rap-Twitter-Analysis/tree/master/shiny_map) folder will be updated when I've fixed the code. The map of the US looks like the following:
+
+![US Tweets](shiny_map/leaflet_map.png)
 
 Exploring tweets mentioning biggie vs. 2pac through a shiny app can be found in the [shiny_twitter_wc](https://github.com/anahitabahri/Rap-Twitter-Analysis/tree/master/shiny_twitter_wc) folder. The wordclouds created here didn't tell a very meaningful story. A better next step was to look into how lyrics differed between the 2 rappers. This shiny app can be found in the [shiny_lyrics_wc](https://github.com/anahitabahri/Rap-Twitter-Analysis/tree/master/shiny_lyrics_wc) folder. The lyrics data comes from the million song dataset. 
 

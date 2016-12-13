@@ -1,0 +1,52 @@
+---
+title: 'MA 615: Final Project'
+author: "Anahita Bahri"
+date: "December 13, 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, comment = FALSE)
+```
+
+Load relevant libraries
+```{r, warning=FALSE, comment=FALSE, message=FALSE}
+library(tidyr) 
+library(dplyr) 
+library(readr) 
+library(ggplot2) 
+library(leaflet)
+```
+
+# Anahita's Final Project: An Analysis of Rappers Using Twitter and Lyrics Data
+As mentioned in the [readme](https://github.com/anahitabahri/Rap-Twitter-Analysis/blob/master/README.md) on my github repo, this project was born from the [Million Song Project](https://github.com/anahitabahri/Million-Song-Project) I recently worked on. Why am I interested in this field? For starters, I'm a musician. After getting studying Music Business at Berklee College of Music, I ended up working at some awesome music industry companies, including Shazam and Universal Music Group. Why rap in particular? I love rap and hip-hop. In fact, I named my cat after Biggie Smalls.
+
+![Biggie the Notorious CAT](https://s28.postimg.org/rc9wg4nod/IMG_7980_1.jpg)
+
+
+### Getting the tweets: searchTwitter vs. filterStream?
+I primarily used filterStream to get tweets for text analysis and visualization. I was able to get more tweets, while searchTwitter had a limitation on how many tweets I could get data on. I did, however, use userTimeline(), which is from the twitteR package. It was easier to get tweets from a particular user (rappers, in my case) using that vs. options in the streamR package. Unfortunately, though, I had a tough time getting accurate location data. When getting tweets in the US that mentioned key words related to Biggie and 2Pac, I received tweets outside the US, despite providing long/lat coordinates to create a border. I also received tweets unrelated to Biggie and 2Pac, despite providing information in the track parameter within filterStream. I'm unsure why this was the case, but you can feel free to explore this further in my [get_tweets.R](https://github.com/anahitabahri/Rap-Twitter-Analysis/blob/master/get_tweets.R) script.
+
+
+### Mapping the US Tweets
+This code can be looked into in detail in my [mapping_us_tweets.R](https://github.com/anahitabahri/Rap-Twitter-Analysis/blob/master/mapping_us_tweets.R) script. I also attempted to create a [shiny app](https://github.com/anahitabahri/Rap-Twitter-Analysis/tree/master/shiny_map) using this map, but haven't been successful yet. I will update this file once I fix things. 
+```{r}
+us_tweets.df3 <- read_csv('shiny_map/us_tweets.csv')
+us_tweets.df3 <- data.frame(us_tweets.df3)
+
+m <- leaflet(us_tweets.df3) %>% addTiles('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', 
+                                         attribution='Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>') 
+# m %>% setView(-100.044345, 41.314352, zoom = 4)
+m %>% addCircles(~lon, ~lat, popup=us_tweets.df3$lon, weight = 3, radius=40, 
+                 color="#ffa500", stroke = TRUE, fillOpacity = 0.8) 
+
+
+# setView sets central location to NEBRASKA, so we can zoom into the US.
+# However, since we have bad data (data outside the United states), this doesn't work.
+```
+
+When zoomed in, the map of the United States looks like the following:  
+![US Tweets](https://github.com/anahitabahri/Rap-Twitter-Analysis/tree/master/shiny_map/leaflet_map.png)
+
+
+
