@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "library(shiny)\n\nfluidPage(\n  # Application title\n  titlePanel(\"Biggie vs. 2Pac: Word Cloud\"),\n  \n  sidebarLayout(\n    # Sidebar with a slider and selection inputs\n    sidebarPanel(\n      selectInput(\"selection\", \"Choose a Rapper:\",\n                  choices = rappers),\n      actionButton(\"update\", \"Change\"),\n      hr(),\n      sliderInput(\"freq\",\n                  \"Minimum Frequency:\",\n                  min = 1,  max = 50, value = 1),\n      sliderInput(\"max\",\n                  \"Maximum Number of Words:\",\n                  min = 1,  max = 300,  value = 100)\n    ),\n    \n    # Show Word Cloud\n    mainPanel(\n      plotOutput(\"plot\")\n    )\n  )\n)",
+    "created" : 1481602277725.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "239277292",
+    "id" : "FE135165",
+    "lastKnownWriteTime" : 1481602316,
+    "last_content_update" : 1481602316488,
+    "path" : "~/Documents/General Assembly/2pacBiggie/Rap-Twitter-Analysis/shiny_twitter_wc/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

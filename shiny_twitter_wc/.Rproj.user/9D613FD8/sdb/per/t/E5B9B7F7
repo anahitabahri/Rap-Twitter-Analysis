@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "library(shiny)\n\nfunction(input, output, session) {\n  # Define a reactive expression for the document term matrix\n  terms <- reactive({\n    # Change when the \"update\" button is pressed...\n    input$update\n    # ...but not for anything else\n    isolate({\n      withProgress({\n        setProgress(message = \"Processing corpus...\")\n        getTermMatrix(input$selection)\n      })\n    })\n  })\n  \n  # Make the wordcloud drawing predictable during a session\n  wordcloud_rep <- repeatable(wordcloud)\n  \n  output$plot <- renderPlot({\n    v <- terms()\n    wordcloud_rep(v, scale=c(4,0.5),\n                  min.freq = input$freq, max.words=input$max,\n                  colors=brewer.pal(8, \"Dark2\"))\n  })\n}",
+    "created" : 1481602277989.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1834437789",
+    "id" : "E5B9B7F7",
+    "lastKnownWriteTime" : 1481602308,
+    "last_content_update" : 1481602308798,
+    "path" : "~/Documents/General Assembly/2pacBiggie/Rap-Twitter-Analysis/shiny_twitter_wc/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
