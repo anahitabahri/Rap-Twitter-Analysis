@@ -1,7 +1,7 @@
 # MA 615 Final Project: Analysis of Rappers Using Twitter & Million Song Data
 ### Anahita Bahri
 
-![2pac & biggie](https://i.ytimg.com/vi/S1sCPjLA9u4/hqdefault.jpg)
+![2pac & biggie](http://thinkingsidewayspodcast.com/wp-content/uploads/2015/04/tupac-and-biggie.jpg)
 
 As a super fan of hip-hop and rap, I decided to embark on a study of tweets revolving around these genres, focusing on a few rappers. This project stems from my work with the [Million Song Dataset](https://github.com/anahitabahri/Million-Song-Project), for which the slides can be found [here](https://docs.google.com/presentation/d/13tOvAZHGCCmxWPWQydHQgfHqdQbYAEYmDfxn_jmuroo/edit?usp=sharing). 
 
