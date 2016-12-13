@@ -2,7 +2,9 @@
 title: 'MA 615: Final Project'
 author: "Anahita Bahri"
 date: "December 13, 2016"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -16,6 +18,7 @@ library(dplyr)
 library(readr) 
 library(ggplot2) 
 library(leaflet)
+library(shiny)
 ```
 
 # Anahita's Final Project: An Analysis of Rappers Using Twitter and Lyrics Data
@@ -28,9 +31,9 @@ As mentioned in the [readme](https://github.com/anahitabahri/Rap-Twitter-Analysi
 I primarily used filterStream to get tweets for text analysis and visualization. I was able to get more tweets, while searchTwitter had a limitation on how many tweets I could get data on. I did, however, use userTimeline(), which is from the twitteR package. It was easier to get tweets from a particular user (rappers, in my case) using that vs. options in the streamR package. Unfortunately, though, I had a tough time getting accurate location data. When getting tweets in the US that mentioned key words related to Biggie and 2Pac, I received tweets outside the US, despite providing long/lat coordinates to create a border. I also received tweets unrelated to Biggie and 2Pac, despite providing information in the track parameter within filterStream. I'm unsure why this was the case, but you can feel free to explore this further in my [get_tweets.R](https://github.com/anahitabahri/Rap-Twitter-Analysis/blob/master/get_tweets.R) script.
 
 
-### Mapping the US Tweets
+### Mapping Tweets in US
 This code can be looked into in detail in my [mapping_us_tweets.R](https://github.com/anahitabahri/Rap-Twitter-Analysis/blob/master/mapping_us_tweets.R) script. I also attempted to create a [shiny app](https://github.com/anahitabahri/Rap-Twitter-Analysis/tree/master/shiny_map) using this map, but haven't been successful yet. I will update this file once I fix things. 
-```{r}
+```{r, warning=FALSE, comment=FALSE, message=FALSE}
 us_tweets.df3 <- read_csv('shiny_map/us_tweets.csv')
 us_tweets.df3 <- data.frame(us_tweets.df3)
 
@@ -46,7 +49,17 @@ m %>% addCircles(~lon, ~lat, popup=us_tweets.df3$lon, weight = 3, radius=40,
 ```
 
 When zoomed in, the map of the United States looks like the following:  
-![US Tweets](https://github.com/anahitabahri/Rap-Twitter-Analysis/tree/master/shiny_map/leaflet_map.png)
+![US Tweets](https://github.com/anahitabahri/Rap-Twitter-Analysis/raw/master/shiny_map/leaflet_map.png)
 
 
+#### 2Pac vs. Biggie Tweets
+All code can be found in the folder [shiny_twitter_wc](https://github.com/anahitabahri/Rap-Twitter-Analysis/tree/master/shiny_twitter_wc). This was not the best text data to create a meaningful visualization, which is why I looked into lyrics data.
+
+#### 2Pac vs. Biggie Lyrics
+All code can be found in the folder [shiny_lyrics_wc](https://github.com/anahitabahri/Rap-Twitter-Analysis/tree/master/shiny_lyrics_wc). The shiny app is also live [here](https://anahita.shinyapps.io/shiny_lyrics_wc/). This tool solidifies my findings in the Million Song Project -- although 2Pac enjoys swearing to an extent, Biggie surpasses him in swearing in songs. 2Pac seems to sing about "Lord" quite a bit. I have lyrics data for songs and artists under the "Religious" genre -- it would be cool to explore rap vs. religious music. I would imagine that there would be very different frequent terms in the 2 genres.
+
+## Next Steps
+Since the twitter tools failed to get me good and accurate data to explore (almost correct location data without tracking correct keywords, meaningless tweets about biggie and 2pac), I'd like to explore similar analysis focusing on just lyrics data that's not in a bag of words format.  
+  
+I'd like to go beyond the wordcloud and analyze and visualize text data with cluster dendrograms, topic modelling, sentiment analysis, among other things. 
 

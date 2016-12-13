@@ -85,36 +85,42 @@ dat_50cent = transform(dat_50cent,tag = reorder(tag,freq))
 
 ######## J COLE ######## 
 
-ggplot(dat_jcole[1:5, ], aes(x = tag, y = freq)) + geom_bar(stat = "identity", color = "#E77471", fill = "#E77471") +
-  labs(title = "J. Cole: Top 5 Hashtags", y = "Frequency", x = "Hashtag") + coord_flip()
+ggplot(dat_jcole[1:5, ], aes(x = tag, y = freq)) + geom_bar(stat = "identity", color = "#ffa500", fill = "#ffa500")+
+  ggtitle("J. Cole: Top 5 Hashtags") +
+  labs(y = "Frequency", x = "Hashtag") + coord_flip()
 # ggsave("hashtag_charts/JCole.png",dpi = 500)
 
 ######## KENDRICK LAMAR ######## 
 
-ggplot(dat_kendrick[1:5, ], aes(x = tag, y = freq)) + geom_bar(stat = "identity", color = "#E77471", fill = "#E77471") +
-  labs(title = "Kendrick Lamar: Top 5 Hashtags", y = "Frequency", x = "Hashtag") + coord_flip()
+ggplot(dat_kendrick[1:5, ], aes(x = tag, y = freq)) + geom_bar(stat = "identity", color = "#ffa500", fill = "#ffa500") +
+  ggtitle("Kendrick Lamar: Top 5 Hashtags") +
+  labs(y = "Frequency", x = "Hashtag") + coord_flip()
 # ggsave("hashtag_charts/Kendrick.png",dpi = 500)
 
 ######## SNOOP DOGG ######## 
 
-ggplot(dat_snoopdogg[1:5, ], aes(x = tag, y = freq)) + geom_bar(stat = "identity", color = "#E77471", fill = "#E77471") +
-  labs(title = "Snoop Dogg: Top 5 Hashtags", y = "Frequency", x = "Hashtag") + coord_flip()
+ggplot(dat_snoopdogg[1:5, ], aes(x = tag, y = freq)) + geom_bar(stat = "identity", color = "#ffa500", fill = "#ffa500") +
+  ggtitle("Snoop Dogg: Top 5 Hashtags") +
+  labs(y = "Frequency", x = "Hashtag") + coord_flip()
 # ggsave("hashtag_charts/SnoopDogg.png",dpi = 500)
 
 ######## P DIDDY ######## 
 
-ggplot(dat_pdiddy[1:5, ], aes(x = tag, y = freq)) + geom_bar(stat = "identity", color = "#E77471", fill = "#E77471") +
-  labs(title = "P. Diddy: Top 5 Hashtags", y = "Frequency", x = "Hashtag") + coord_flip()
+ggplot(dat_pdiddy[1:5, ], aes(x = tag, y = freq)) + geom_bar(stat = "identity", color = "#ffa500", fill = "#ffa500") +
+  ggtitle("P. Diddy: Top 5 Hashtags") +
+  labs(y = "Frequency", x = "Hashtag") + coord_flip()
 # ggsave("hashtag_charts/PDiddy.png",dpi = 500)
 
 ######## NAS ######## 
 
-ggplot(dat_nas[1:5, ], aes(x = tag, y = freq)) + geom_bar(stat = "identity", color = "#E77471", fill = "#E77471") +
-  labs(title = "Nas: Top 5 Hashtags", y = "Frequency", x = "Hashtag") + coord_flip()
+ggplot(dat_nas[1:5, ], aes(x = tag, y = freq)) + geom_bar(stat = "identity", color = "#ffa500", fill = "#ffa500") +
+  ggtitle("Nas: Top 5 Hashtags") +
+  labs(y = "Frequency", x = "Hashtag") + coord_flip()
 # ggsave("hashtag_charts/Nas.png",dpi = 500)
 
 ######## 50 CENT ######## 
 
-ggplot(dat_50cent[1:5, ], aes(x = tag, y = freq)) + geom_bar(stat = "identity", color = "#E77471", fill = "#E77471") +
-  labs(title = "50 Cent: Top 5 Hashtags", y = "Frequency", x = "Hashtag") + coord_flip()
+ggplot(dat_50cent[1:5, ], aes(x = tag, y = freq)) + geom_bar(stat = "identity", color = "#ffa500", fill = "#ffa500") +
+  ggtitle("50 Cent: Top 5 Hashtags") +
+  labs(y = "Frequency", x = "Hashtag") + coord_flip()
 # ggsave("hashtag_charts/50Cent.png",dpi = 500)
