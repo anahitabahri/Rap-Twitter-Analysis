@@ -21,19 +21,21 @@ us_tweets.df2 <- rename(us_tweets.df2, lon = place_lon, lat = place_lat)
 us_tweets.df3 <- us_tweets.df2[complete.cases(us_tweets.df2$lon),]
 
 # export csv, so we don't have to keep parsing through json file
-write.csv(us_tweets.df3, "data/csv_files/us_tweets.csv", row.names = FALSE)
+write.csv(us_tweets.df3, "us_tweets.csv", row.names = FALSE)
+
+# read csv, instead of parsing json file
+us_tweets.df3 <- read_csv('us_tweets.csv')
+us_tweets.df3 <- data.frame(us_tweets.df3)
 
 # plot map with leaflet
 m <- leaflet(us_tweets.df3) %>% addTiles('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', 
-                              attribution='Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>') 
-m %>% setView(-100.044345, 41.314352, zoom = 4)
+                                         attribution='Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>') 
+# m %>% setView(-100.044345, 41.314352, zoom = 4) # sets central location to NEBRASKA, so we can zoom into the US
 m %>% addCircles(~lon, ~lat, popup=us_tweets.df3$lon, weight = 3, radius=40, 
                  color="#ffa500", stroke = TRUE, fillOpacity = 0.8) 
 
-
-# read csv, instead of parsing json file
-us_tweets.df3 <- read_csv('data/csv_files/us_tweets.csv')
-us_tweets.df3 <- data.frame(us_tweets.df3)
+# unfortunately, setView doesn't do anything since we have data points in europe and africa, 
+# even though we asked twitter for data just in the US! 
 
 # get simple stats for follower count, which will be filter for shiny app
 min(us_tweets.df3$followers_count) # 0

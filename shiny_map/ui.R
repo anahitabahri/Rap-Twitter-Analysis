@@ -1,8 +1,14 @@
 library(shiny)
+library(leaflet)
 
-function(input, output) {
-  output$map <- renderLeaflet({
-    leaflet(us_tweets) %>% addTiles('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png') %>% addCircles(~lon, ~lat, weight = 3, radius=40, 
-                                                                                                                color="#ffa500", stroke = TRUE, fillOpacity = 0.8)
-  })
-}
+sidebarLayout(
+  # Sidebar with a slider and selection inputs
+  sidebarPanel(sliderInput("followers_count",
+                           "Follower Count:",
+                           min = 1,  max = 1000, value = 500)),
+  
+  # Show Word Cloud
+  mainPanel(
+    leafletOutput(outputId="map")
+  )
+)
