@@ -22,6 +22,14 @@ Exploring tweets mentioning biggie vs. 2pac through a shiny app can be found in 
 
 The [exploring_rapper_data](https://github.com/anahitabahri/Rap-Twitter-Analysis/blob/master/exploring_rapper_data.R) script includes code that extracts the most common hashtags used by those rappers that were either heavily influenced by 2Pac and/or Biggie or were considered associated acts. The charts can be found in the [hashtag_charts](https://github.com/anahitabahri/Rap-Twitter-Analysis/tree/master/hashtag_charts) folder, but are also displayed below. Also, as I mentioned earlier, I created a shiny app that displays word clouds for these rappers too. The code used for creating that shiny app can be found in the [shiny_rap_tweets_wc](https://github.com/anahitabahri/Rap-Twitter-Analysis/tree/master/shiny_rap_tweets_wc) folder.
 
+Hope you enjoy exploring this project!
+
+![2pac & biggie](https://s-media-cache-ak0.pinimg.com/564x/64/b9/25/64b92538e5b506105afccf9a808deb3d.jpg)
+
+
+## Top 5 Hashtags for Rappers
+As I mentioned, these rappers were either influenced by 2Pac and/or Biggie OR were considered associated acts.
+
 ### 50 Cent
 ![50 Cent](hashtag_charts/50Cent.png)
 
