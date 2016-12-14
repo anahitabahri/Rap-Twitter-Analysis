@@ -8,7 +8,7 @@ As a super fan of hip-hop and rap, I decided to embark on a study of tweets revo
 
 I wanted to focus on the rivalry between the late 2Pac and Biggie, but decided to bring in data for rappers who were either heavily influenced by the 2 rappers or considered associated acts. These rappers include 50 Cent, J. Cole, Kendrick Lamar, Nas, P. Diddy, and Snoop Dogg.
 
-Before digging into the text below and in my [markdown file](https://github.com/anahitabahri/Rap-Twitter-Analysis/blob/master/Rap_Analysis.Rmd), check out my live shiny app on <b>Biggie vs. 2Pac lyrics data</b> [here](https://anahita.shinyapps.io/shiny_lyrics_wc/) and on <b>tweets by rappers influenced by Biggie and/or 2Pac</b> [here](https://anahita.shinyapps.io/shiny_rap_tweets_wc/).
+Before digging into the text below and in my [markdown file](https://github.com/anahitabahri/Rap-Twitter-Analysis/blob/master/Rap_Analysis.Rmd), check out my live shiny apps on <b>Biggie vs. 2Pac lyrics data</b> [here](https://anahita.shinyapps.io/shiny_lyrics_wc/) and on <b>tweets by rappers influenced by Biggie and/or 2Pac</b> [here](https://anahita.shinyapps.io/shiny_rap_tweets_wc/).
 
 ## How to navigate this repo
 
