@@ -39,5 +39,3 @@ The [exploring_rapper_data](https://github.com/anahitabahri/Rap-Twitter-Analysis
 
 ### Snoop Dogg
 ![Snoop Dogg](hashtag_charts/SnoopDogg.png)
-
-
