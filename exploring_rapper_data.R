@@ -88,39 +88,39 @@ dat_50cent = transform(dat_50cent,tag = reorder(tag,freq))
 ggplot(dat_jcole[1:5, ], aes(x = tag, y = freq)) + geom_bar(stat = "identity", color = "#ffa500", fill = "#ffa500")+
   ggtitle("J. Cole: Top 5 Hashtags") +
   labs(y = "Frequency", x = "Hashtag") + coord_flip()
-# ggsave("hashtag_charts/JCole.png", width = 4.46, height=3.075)
+# ggsave("hashtag_charts/JCole.png", dpi = 500)
 
 ######## KENDRICK LAMAR ######## 
 
 ggplot(dat_kendrick[1:5, ], aes(x = tag, y = freq)) + geom_bar(stat = "identity", color = "#ffa500", fill = "#ffa500") +
   ggtitle("Kendrick Lamar: Top 5 Hashtags") +
   labs(y = "Frequency", x = "Hashtag") + coord_flip()
-# ggsave("hashtag_charts/Kendrick.png", width = 4.46, height=3.075)
+# ggsave("hashtag_charts/Kendrick.png", dpi = 500)
 
 ######## SNOOP DOGG ######## 
 
 ggplot(dat_snoopdogg[1:5, ], aes(x = tag, y = freq)) + geom_bar(stat = "identity", color = "#ffa500", fill = "#ffa500") +
   ggtitle("Snoop Dogg: Top 5 Hashtags") +
   labs(y = "Frequency", x = "Hashtag") + coord_flip()
-# ggsave("hashtag_charts/SnoopDogg.png", width = 4.46, height=3.075)
+# ggsave("hashtag_charts/SnoopDogg.png", dpi = 500)
 
 ######## P DIDDY ######## 
 
 ggplot(dat_pdiddy[1:5, ], aes(x = tag, y = freq)) + geom_bar(stat = "identity", color = "#ffa500", fill = "#ffa500") +
   ggtitle("P. Diddy: Top 5 Hashtags") +
   labs(y = "Frequency", x = "Hashtag") + coord_flip()
-# ggsave("hashtag_charts/PDiddy.png", width = 4.46, height=3.075)
+# ggsave("hashtag_charts/PDiddy.png", dpi = 500)
 
 ######## NAS ######## 
 
 ggplot(dat_nas[1:5, ], aes(x = tag, y = freq)) + geom_bar(stat = "identity", color = "#ffa500", fill = "#ffa500") +
   ggtitle("Nas: Top 5 Hashtags") +
   labs(y = "Frequency", x = "Hashtag") + coord_flip()
-# ggsave("hashtag_charts/Nas.png", width = 4.46, height=3.075)
+# ggsave("hashtag_charts/Nas.png", dpi = 500)
 
 ######## 50 CENT ######## 
 
 ggplot(dat_50cent[1:5, ], aes(x = tag, y = freq)) + geom_bar(stat = "identity", color = "#ffa500", fill = "#ffa500") +
   ggtitle("50 Cent: Top 5 Hashtags") +
   labs(y = "Frequency", x = "Hashtag") + coord_flip()
-# ggsave("hashtag_charts/50Cent.png", width = 4.46, height=3.075)
+# ggsave("hashtag_charts/50Cent.png", dpi = 500)
