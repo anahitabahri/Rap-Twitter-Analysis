@@ -8,7 +8,7 @@ As a super fan of hip-hop and rap, I decided to embark on a study of tweets revo
 
 I wanted to focus on the rivalry between the late 2Pac and Biggie, but decided to bring in data for rappers who were either heavily influenced by the 2 rappers or considered associated acts. These rappers include 50 Cent, J. Cole, Kendrick Lamar, Nas, P. Diddy, and Snoop Dogg.
 
-Before digging into the text below and in my [markdown file](https://github.com/anahitabahri/Rap-Twitter-Analysis/blob/master/Rap_Analysis.Rmd), check out my live shiny app on <b>Biggie vs. 2Pac lyrics data</b> [here](https://anahita.shinyapps.io/shiny_lyrics_wc/).
+Before digging into the text below and in my [markdown file](https://github.com/anahitabahri/Rap-Twitter-Analysis/blob/master/Rap_Analysis.Rmd), check out my live shiny app on <b>Biggie vs. 2Pac lyrics data</b> [here](https://anahita.shinyapps.io/shiny_lyrics_wc/) and on <b>tweets by rappers influenced by Biggie and/or 2Pac</b> [here](https://anahita.shinyapps.io/shiny_rap_tweets_wc/).
 
 ## How to navigate this repo
 
@@ -20,7 +20,7 @@ How about mapping the us_tweets file in the get_tweets script? Refer to my [mapp
 
 Exploring tweets mentioning biggie vs. 2pac through a shiny app can be found in the [shiny_twitter_wc](https://github.com/anahitabahri/Rap-Twitter-Analysis/tree/master/shiny_twitter_wc) folder. The wordclouds created here didn't tell a very meaningful story. A better next step was to look into how lyrics differed between the 2 rappers, data for which comes from the million song dataset. This shiny app code for lyrics visualization can be found in the [shiny_lyrics_wc](https://github.com/anahitabahri/Rap-Twitter-Analysis/tree/master/shiny_lyrics_wc) folder. 
 
-The [exploring_rapper_data](https://github.com/anahitabahri/Rap-Twitter-Analysis/blob/master/exploring_rapper_data.R) script includes code that extracts the most common hashtags used by those rappers that were either heavily influenced by 2Pac and/or Biggie or were considered associated acts. The charts can be found in the [hashtag_charts](https://github.com/anahitabahri/Rap-Twitter-Analysis/tree/master/hashtag_charts) folder, but are also displayed below.
+The [exploring_rapper_data](https://github.com/anahitabahri/Rap-Twitter-Analysis/blob/master/exploring_rapper_data.R) script includes code that extracts the most common hashtags used by those rappers that were either heavily influenced by 2Pac and/or Biggie or were considered associated acts. The charts can be found in the [hashtag_charts](https://github.com/anahitabahri/Rap-Twitter-Analysis/tree/master/hashtag_charts) folder, but are also displayed below. Also, as I mentioned earlier, I created a shiny app that displays word clouds for these rappers too. The code used for creating that shiny app can be found [here](https://github.com/anahitabahri/Rap-Twitter-Analysis/tree/master/shiny_rap_tweets_wc).
 
 ### 50 Cent
 ![50 Cent](hashtag_charts/50Cent.png)

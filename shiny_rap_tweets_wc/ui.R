@@ -2,7 +2,7 @@ library(shiny)
 
 fluidPage(
   # Application title
-  titlePanel("What are rappers talking about on Twitter?"),
+  titlePanel("What are rappers tweeting about?"),
   
   sidebarLayout(
     # Sidebar with a slider and selection inputs

@@ -19,11 +19,10 @@ function(input, output, session) {
   
   output$plot <- renderPlot({
     v <- terms()
-    wordcloud_rep(v, scale=c(4,0.5),
+    wordcloud_rep(v, scale=c(3,0.5),
                   min.freq = input$freq, max.words=input$max,
                   colors=brewer.pal(8, "Dark2"))
   })
 }
-
 
 # rsconnect::deployApp()
