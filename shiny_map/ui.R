@@ -2,12 +2,11 @@ library(shiny)
 library(leaflet)
 
 sidebarLayout(
-  # Sidebar with a slider and selection inputs
-  sidebarPanel(sliderInput("followers_count",
-                           "Follower Count:",
-                           min = 1,  max = 1000, value = 500)),
+  # slider and selection inputs
+  sliderInput(inputId = "fc","Follower Count:",
+              min = 1,  max = 1000, value = 500),
   
-  # Show Word Cloud
+  # show map
   mainPanel(
     leafletOutput(outputId="map")
   )
