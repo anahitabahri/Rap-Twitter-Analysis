@@ -28,7 +28,7 @@ Hope you enjoy exploring this project!
 
 ![2pac & biggie](https://s-media-cache-ak0.pinimg.com/564x/64/b9/25/64b92538e5b506105afccf9a808deb3d.jpg)
 
-## Milliong Song Dataset: GGANIMATE
+## Milliong Song Dataset
 #### Artist familiarity & hotttnesss for rap and country over the years
 ![Rap & Country](msd_analysis/rap_country.gif)
 #### Artist familiarity & hotttnesss for rap vs. country
