@@ -61,8 +61,10 @@ All code can be found in the folder [shiny_lyrics_wc](https://github.com/anahita
 #### Rappers influenced by 2Pac and/or Biggie
 As I mentioned in the readme, I decided to bring in data for rappers who were either heavily influenced by the 2 rappers or considered associated acts. These rappers include 50 Cent, J. Cole, Kendrick Lamar, Nas, P. Diddy, and Snoop Dogg. The [exploring_rapper_data script](https://github.com/anahitabahri/Rap-Twitter-Analysis/blob/master/exploring_rapper_data.R) includes code that extracts the most common hashtags used by these rappers. The charts can be found in the [hashtag_charts folder](https://github.com/anahitabahri/Rap-Twitter-Analysis/tree/master/hashtag_charts). Also, I created a [shiny app](https://anahita.shinyapps.io/shiny_rap_tweets_wc/) that displays word clouds for these rappers too. The code used for creating that shiny app can be found in the [shiny_rap_tweets_wc folder](https://github.com/anahitabahri/Rap-Twitter-Analysis/tree/master/shiny_rap_tweets_wc).
 
+#### Million Song Dataset
+I also explored gganimate using the million song dataset. All the gifs can be found in the [msd_analysis](https://github.com/anahitabahri/Rap-Twitter-Analysis/tree/master/msd_analysis) folder or in the [readme](https://github.com/anahitabahri/Rap-Twitter-Analysis/blob/master/README.md) file.
+
 ## Next Steps
 Since the twitter tools failed to get me good and accurate data to explore (almost correct location data without tracking correct keywords, meaningless tweets about biggie and 2pac), I'd like to explore similar analysis focusing on just lyrics data that's not in a bag of words format.  
   
-I'd like to go beyond the wordcloud and analyze and visualize text data with cluster dendrograms, topic modelling, sentiment analysis, among other things. 
-
+I'd like to go beyond the wordcloud and analyze and visualize text data with cluster dendrograms, topic modelling, sentiment analysis, random forests, among other things. 
